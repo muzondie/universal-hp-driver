@@ -1,0 +1,20 @@
+[package]
+name = "universal_hp_driver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = { version = "0.5", features = ["wgpu"] }
+reqwest = { version = "0.11", features = ["json", "stream"] }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+walkdir = "4.0"
+regex = "1.5"
+thiserror = "1.0"
+once_cell = "1.8"
+windows = { version = "0.39", features = [
+    "Win32_Foundation",
+    "Win32_System_SystemServices",
+    "Win32_Devices_DeviceAndDriverSetup"
+]}
+zip = "0.6"
